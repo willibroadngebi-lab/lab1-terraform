@@ -63,7 +63,7 @@ Example configuration:
 ```
 project_id = "chas-devsecops-2026"
 region     = "europe-north1"
-student_id = "your-name"
+student_id = "willibroad"
 ```
 
 ⚠️ This file is ignored by git to prevent sensitive information from being committed.
