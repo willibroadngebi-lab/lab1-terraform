@@ -174,3 +174,11 @@ terraform destroy
 Student: `Willibroad Ngebi`
 Course: DevSecOps 2026
 Lab: Terraform Infrastructure Deployment
+
+
+# Project Title
+
+## Images
+
+![Terraform Setup](images/Terraform_setup.png)
+![Merge Request](images/merge_request.png)
