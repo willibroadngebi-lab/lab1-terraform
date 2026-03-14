@@ -174,3 +174,14 @@ terraform destroy
 Student: `Willibroad Ngebi`
 Course: DevSecOps 2026
 Lab: Terraform Infrastructure Deployment
+
+# Project Title
+
+## Files Added
+
+- **[Terraform setup.png](images/Terraform%20setup.png)**: This file contains the setup instructions and configurations for Terraform.
+- **[merge request .png](images/merge%20request%20.png)**: This file shows the details of the merge request related to the project.
+
+## Images
+![Terraform setup](images/Terraform%20setup.png)
+![Merge Request](images/merge%20request%20.png)
