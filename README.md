@@ -182,3 +182,4 @@ Lab: Terraform Infrastructure Deployment
 
 ![Terraform Setup](images/Terraform_setup.png)
 ![Merge Request](images/merge_request.png)
+![Authentication to GCP succeeded](images/Authentication%20to%20GCP%20succeeded.png)
