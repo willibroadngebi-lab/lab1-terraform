@@ -18,11 +18,12 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Authenticate to Google Cloud
-        env:
-          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-        run: |
-          echo "$GCP_SA_KEY" > "$HOME/gcp-key.json"
-          echo "GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcp-key.json" >> $GITHUB_ENV
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Setup Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
 
       - name: Terraform Init
         run: terraform init
@@ -47,4 +48,3 @@ jobs:
             -var="project_id=chas-devsecops-2026" \
             -var="region=europe-north1" \
             -var="student_id=willibroad"
-
