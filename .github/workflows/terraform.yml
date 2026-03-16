@@ -41,10 +41,4 @@ jobs:
             -var="region=europe-north1" \
             -var="student_id=willibroad"
 
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/main'
-        run: |
-          terraform apply -auto-approve \
-            -var="project_id=chas-devsecops-2026" \
-            -var="region=europe-north1" \
-            -var="student_id=willibroad"
+      
