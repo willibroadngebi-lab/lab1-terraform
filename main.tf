@@ -51,7 +51,6 @@ resource "google_compute_resource_policy" "daily_backup" {
         start_time    = "03:00"
       }
     }
-
     retention_policy {
       max_retention_days    = 7
       on_source_disk_delete = "KEEP_AUTO_SNAPSHOTS"
