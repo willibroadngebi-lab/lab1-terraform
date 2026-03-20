@@ -46,5 +46,5 @@ jobs:
         run: |
           terraform apply -auto-approve \
             -var="project_id=chas-devsecops-2026" \
-            -var="region=europe-west1" \
+            -var="region=europe-north1" \
             -var="student_id=willibroad"
