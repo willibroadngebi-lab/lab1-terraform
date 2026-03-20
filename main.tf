@@ -13,7 +13,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "vm" {
-  name         = "${var.student_id}-newlab1-vm"  # Renamed
+  name         = "${var.student_id}-lab1-vm"
   machine_type = "e2-micro"
   zone         = "${var.region}-b"
 
@@ -40,9 +40,8 @@ resource "google_compute_instance" "vm" {
 
   tags = ["lab1", "ssh"]
 }
-
 resource "google_compute_resource_policy" "daily_backup" {
-  name   = "${var.student_id}-newdaily-backup"  # Renamed
+  name   = "${var.student_id}-daily-backup"
   region = var.region
 
   snapshot_schedule_policy {
@@ -52,7 +51,6 @@ resource "google_compute_resource_policy" "daily_backup" {
         start_time    = "03:00"
       }
     }
-
     retention_policy {
       max_retention_days    = 7
       on_source_disk_delete = "KEEP_AUTO_SNAPSHOTS"
@@ -65,4 +63,3 @@ resource "google_compute_disk_resource_policy_attachment" "backup_attachment" {
   disk = google_compute_instance.vm.name
   zone = "${var.region}-b"
 }
-
